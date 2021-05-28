@@ -104,7 +104,7 @@
      --main-color:#5FB4A2;
      --font-color:#33323D;
      --secondary-color:#203A4C;
-     --third-color: #000000;
+     --third-color: rgba(0, 0, 0, 0.10);
 
      --white-one:#FAFAFA;
      --white-two:#F5F5F5;
@@ -172,6 +172,10 @@ p{
      color:var(--main-color)
 }
 
+.menu-lists:hover a{
+     color:var(--secondary-color);
+}
+
 /*------footer------*/
 
 footer{
@@ -216,6 +220,8 @@ fill:var(--font-color);
 }
 
 
+
+
 /*------HOME------*/
 
 
@@ -252,15 +258,17 @@ fill:var(--font-color);
      background-color:var(--secondary-color);
      width: 50%;
      align-items: center;
+     transition:0.5s;
 }
 
+
 .btn img{
-     background-color: red;
      padding-top:1.7rem;
      padding-bottom:1.5em;
      padding-left:1.6rem;
      padding-right:1.6rem;
      background-color: var(--third-color);
+    
 
 }
 
@@ -271,6 +279,13 @@ fill:var(--font-color);
      font-family: 'Public Sans', sans-serif;
 }
 
+.main-btn:hover img{
+     background-color:#55A291;
+}
+
+.main-btn:hover{
+     background-color:rgba(95, 180, 162, 1);
+}
 
 
 
@@ -309,11 +324,20 @@ article img{
      padding-bottom:1.5em;
      padding-left:1.6rem;
      padding-right:1rem;
+     transition:0.5s;
     
 }
 
 .btn-article p{
      color:var(--font-color)
+}
+.btn-article:hover{
+     color:var(--white-one);
+     background-color:rgba(51, 50, 61, 1)
+}
+.btn-article:hover  p{
+     color:var(--white-one);
+    
 }
 
 .separator{
@@ -491,7 +515,7 @@ h4{
      width:50%;
 }
 
-/*------Formulaire------*/
+/*------Contact------*/
 
 .contact{
      display: flex;
@@ -503,7 +527,22 @@ h4{
      width:40%;
 }
 
-.contact p{
+
+.contact ul li a svg path{
+     fill:var(--font-color);
+}
+
+.contact ul li a svg:hover path{
+     fill:var(--main-color);
+}
+.contact-right ul{
+     margin-top:2rem;
+     margin-bottom:4rem;
+}
+
+.contact-right{
+     display: flex;
+     flex-direction: column;
      width: 60%;
 }
 
@@ -523,4 +562,148 @@ textarea{
 
 form{
      width: 60%;
+}
+form input,form textarea{
+     background-color:#33323d15;
+     border:none;
+     padding:1.6rem;
+     margin-top:1.6rem;
+     margin-bottom:1.6rem;
+     font-size:1.3rem;
+     font-family:"public sans", sans-serif;
+}
+
+.btn-form{
+     margin-top:2.4rem;
+     text-align: center;
+     width:30%;
+     background-color:var(--secondary-color);
+}
+.btn-form p{
+     text-align: center;
+     width: 100%;
+     color:var(--white-one);
+} 
+
+.btn-form:hover{
+     background-color:white;
+     
+}
+
+.btn-form:hover p{
+     color:var(--secondary-color)
+}
+
+
+@media (max-width: 1200px) {
+     /*----main----*/
+     /*----hero----*/
+     .container{
+          margin-right:2rem;
+          margin-left:2rem;
+     }
+     h1{
+          font-size:4rem;
+     }
+     .hero-content{
+          width: 60%;
+          height:50%;
+     
+     }
+     .hero{
+          height:70vh;
+     }
+
+     .hero img{
+          object-fit: cover;
+          height:100%;
+          object-position: 50% 50%;
+     }
+
+      /*----article----*/
+
+     article img{
+          max-width: 40%;
+          object-fit:cover;
+          object-position: 80% 50%;;
+     }
+
+     .article-content{
+          padding-left:6rem;
+          padding-right:6rem;
+          width: 60%;
+          display: flex;
+          flex-direction: column;   
+          justify-content: space-between;  
+          }
+
+     .article-content .separator:first-child
+     {
+          margin-bottom:8rem;
+
+     }   
+     .article-content .separator:last-child
+     {
+          margin-top:8rem;
+     }     
+
+.link .btn{
+     width: 30%;
+}
+
+.link h2{
+     width: 50%;
+     text-transform: none;
+}
+
+.link .separator{
+     width:10%;
+}
+
+.img-article{
+   
+          max-width: 50%;
+          object-fit:contain;
+          object-position: 50% 50%;;
+     
+
+}
+.full-project{
+     flex-direction: column;
+}
+.project-content{
+     width: 100%;
+}
+.side-info{
+     width:100%;
+     display: flex;
+     flex-direction: column;
+
+}
+.side-spec-container{
+     display: flex;
+     flex-direction: row-reverse;
+}
+.spec-container{
+     width: 50%;
+}
+.side-info-text-container{
+     width: 50%; 
+     margin-top:-8rem;   
+}
+.contact{
+     flex-direction: column;
+}
+.contact-right{
+     width: 100%;
+}
+
+form{
+     width: 100%;
+}
+}  
+@media (max-width: 1200px){
+     .hero-content{
+          position:static;
+     }
 }
