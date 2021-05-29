@@ -185,7 +185,7 @@ h2 {
      color: var(--font-color);
 }
 
-p {
+p,span {
      font-size: 1.6rem;
      font-family: 'Public Sans', sans-serif;
      font-weight: 400;
@@ -322,7 +322,7 @@ footer {
 
 }
 
-.btn p {
+.btn span {
      text-align: center;
      color: var(--white-one);
      width: 100%;
@@ -380,7 +380,7 @@ article img {
 
 }
 
-.btn-article p {
+.btn-article span {
      color: var(--font-color)
 }
 
@@ -389,7 +389,7 @@ article img {
      background-color: rgba(51, 50, 61, 1)
 }
 
-.btn-article:hover p {
+.btn-article:hover span {
      color: var(--white-one);
 
 }
@@ -643,7 +643,7 @@ form textarea {
      background-color: var(--secondary-color);
 }
 
-.btn-form p {
+.btn-form span {
      text-align: center;
      width: 100%;
      color: var(--white-one);
@@ -654,7 +654,7 @@ form textarea {
 
 }
 
-.btn-form:hover p {
+.btn-form:hover span {
      color: var(--secondary-color)
 }
 
@@ -752,14 +752,7 @@ form textarea {
           width: 100%;
      }
 }
-
-
-
 /*-----burger-----*/
-
-
-
-
 .hamburger {
      display: none;
      position: relative;
